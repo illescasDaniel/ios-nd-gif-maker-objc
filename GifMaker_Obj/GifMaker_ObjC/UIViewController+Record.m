@@ -93,7 +93,7 @@ static const float kFrameRate = 15;
     CFStringRef mediaType = (__bridge CFStringRef)([info objectForKey:UIImagePickerControllerMediaType]);
     
     // Handle a movie capture
-    if (mediaType == kUTTypeMovie) {
+	if (CFStringCompare(mediaType, kUTTypeMovie, 0) == kCFCompareEqualTo) {
         
         NSURL *rawVideoURL = [info objectForKey:UIImagePickerControllerMediaURL];
         
@@ -103,7 +103,9 @@ static const float kFrameRate = 15;
         NSNumber *duration = [NSNumber numberWithFloat: end.floatValue - start.floatValue];
         
         [self cropVideoToSquare:rawVideoURL start: start duration: duration];
-    }
+	} else {
+		[picker dismissViewControllerAnimated:true completion:nil];
+	}
 }
 
 -(void)cropVideoToSquare:(NSURL*)rawVideoURL start:(NSNumber*)start duration:(NSNumber*)duration {
@@ -174,9 +176,9 @@ static const float kFrameRate = 15;
 
 # pragma mark - Gif Conversion and Display methods
 -(void)convertVideoToGif:(NSURL*)croppedURL start:(NSNumber*)start duration: (NSNumber*)duration {
-    
-    Regift *regift;
-    
+
+	Regift *regift;
+
     if (start == nil) {
         // Untrimmed
         regift = [[Regift alloc] initWithSourceFileURL:croppedURL destinationFileURL: nil frameCount:kFrameCount delayTime:kDelayTime loopCount:kLoopCount];
@@ -184,9 +186,9 @@ static const float kFrameRate = 15;
         // trimmed
         regift = [[Regift alloc] initWithSourceFileURL:croppedURL destinationFileURL:nil startTime:start.floatValue duration:duration.floatValue frameRate:kFrameRate loopCount:kLoopCount];
     }
-    
+
     NSURL *gifURL = [regift createGif];
-    
+
     [self saveGif:gifURL videoURL:croppedURL];
 }
 
@@ -196,13 +198,12 @@ static const float kFrameRate = 15;
 }
 
 -(void)displayGif:(Gif*)gif {
-    GifEditorViewController *gifEditorVC = [self.storyboard instantiateViewControllerWithIdentifier:@"GifEditorViewController"];
-    gifEditorVC.gif = gif;
-    
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self dismissViewControllerAnimated:YES completion:nil];
-        [self.navigationController pushViewController:gifEditorVC animated:YES];
-    });
+	dispatch_async(dispatch_get_main_queue(), ^{
+		GifEditorViewController *gifEditorVC = [self.storyboard instantiateViewControllerWithIdentifier:@"GifEditorViewController"];
+		gifEditorVC.gif = gif;
+		[self dismissViewControllerAnimated:YES completion:nil];
+		[self.navigationController pushViewController:gifEditorVC animated:YES];
+	});
 }
 
 @end

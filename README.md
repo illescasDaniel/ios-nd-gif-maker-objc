@@ -2,6 +2,8 @@
 
 # GifMaker (Objective-C)
 
+(Updated in 2023 to be able to compile it. For now I just updated "GifMaker_Obj")
+
 ![Platform iOS](https://img.shields.io/badge/nanodegree-iOS-blue.svg)
 
 This repository contains resources for the GifMaker (Objective-C) project.
