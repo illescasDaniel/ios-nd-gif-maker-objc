@@ -15,8 +15,6 @@
 
 #import "GifCell.h"
 
-#import <QuartzCore/QuartzCore.h>
-
 @interface SavedGifsViewController()
 
 @property (weak, nonatomic) IBOutlet UIView *emptyView;

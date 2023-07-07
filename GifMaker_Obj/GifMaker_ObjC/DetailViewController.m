@@ -9,8 +9,6 @@
 #import "DetailViewController.h"
 #import "UIViewController+Theme.h"
 
-#import <QuartzCore/QuartzCore.h>
-
 @interface DetailViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *gifImageView;

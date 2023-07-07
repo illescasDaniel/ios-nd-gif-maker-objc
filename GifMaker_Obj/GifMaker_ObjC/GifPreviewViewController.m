@@ -11,8 +11,6 @@
 
 #import "AppDelegate.h"
 
-#import <QuartzCore/QuartzCore.h>
-
 @interface GifPreviewViewController()
 
 @property (weak, nonatomic) IBOutlet UIImageView *gifImageView;
