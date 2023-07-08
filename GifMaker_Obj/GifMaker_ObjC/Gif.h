@@ -9,7 +9,7 @@
 @import Foundation;
 @import UIKit;
 
-@interface Gif : NSObject <NSCoding>
+@interface Gif : NSObject <NSSecureCoding>
 
 @property (nonatomic) NSURL *url;
 @property (nonatomic) NSString *caption;

@@ -11,6 +11,8 @@
 		2AF807ED1CCFDA5600CFD995 /* Regift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF807E91CCFDA5600CFD995 /* Regift.swift */; };
 		2AF807EE1CCFDA5600CFD995 /* RegiftCaption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF807EA1CCFDA5600CFD995 /* RegiftCaption.swift */; };
 		2AF807F51CCFF7E000CFD995 /* UIViewController+Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF807F41CCFF7E000CFD995 /* UIViewController+Theme.m */; };
+		65E5CB162A59C33700DC9E58 /* NSKeyedArchiver+securelyArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E5CB152A59C33700DC9E58 /* NSKeyedArchiver+securelyArchive.m */; };
+		65E5CB192A59C74300DC9E58 /* NSKeyedUnarchiver+securelyUnarchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E5CB182A59C74300DC9E58 /* NSKeyedUnarchiver+securelyUnarchive.m */; };
 		A92C344F1D1E280800D3A451 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A92C34441D1E280800D3A451 /* DetailViewController.m */; };
 		A92C34501D1E280800D3A451 /* GifCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A92C34461D1E280800D3A451 /* GifCell.m */; };
 		A92C34511D1E280800D3A451 /* GifPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A92C34481D1E280800D3A451 /* GifPreviewViewController.m */; };
@@ -37,6 +39,10 @@
 		2AF807F41CCFF7E000CFD995 /* UIViewController+Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Theme.m"; sourceTree = "<group>"; };
 		658E84D82A58B704002A4841 /* build.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = build.xcconfig; sourceTree = "<group>"; };
 		658E84DA2A58B722002A4841 /* build.xcconfig.sample */ = {isa = PBXFileReference; lastKnownFileType = text; name = build.xcconfig.sample; path = "../../../../../ChatGPT WebView/ChatGPT WebView/build.xcconfig.sample"; sourceTree = "<group>"; };
+		65E5CB142A59C33700DC9E58 /* NSKeyedArchiver+securelyArchive.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSKeyedArchiver+securelyArchive.h"; sourceTree = "<group>"; };
+		65E5CB152A59C33700DC9E58 /* NSKeyedArchiver+securelyArchive.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSKeyedArchiver+securelyArchive.m"; sourceTree = "<group>"; };
+		65E5CB172A59C74300DC9E58 /* NSKeyedUnarchiver+securelyUnarchive.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSKeyedUnarchiver+securelyUnarchive.h"; sourceTree = "<group>"; };
+		65E5CB182A59C74300DC9E58 /* NSKeyedUnarchiver+securelyUnarchive.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSKeyedUnarchiver+securelyUnarchive.m"; sourceTree = "<group>"; };
 		A92C34431D1E280800D3A451 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		A92C34441D1E280800D3A451 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		A92C34451D1E280800D3A451 /* GifCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GifCell.h; sourceTree = "<group>"; };
@@ -119,6 +125,10 @@
 				A92C344C1D1E280800D3A451 /* UIViewController+Record.m */,
 				2AF807F31CCFF7E000CFD995 /* UIViewController+Theme.h */,
 				2AF807F41CCFF7E000CFD995 /* UIViewController+Theme.m */,
+				65E5CB142A59C33700DC9E58 /* NSKeyedArchiver+securelyArchive.h */,
+				65E5CB152A59C33700DC9E58 /* NSKeyedArchiver+securelyArchive.m */,
+				65E5CB172A59C74300DC9E58 /* NSKeyedUnarchiver+securelyUnarchive.h */,
+				65E5CB182A59C74300DC9E58 /* NSKeyedUnarchiver+securelyUnarchive.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -275,8 +285,10 @@
 				A92C34541D1E280800D3A451 /* WelcomeViewController.m in Sources */,
 				A92C34531D1E280800D3A451 /* UIViewController+Record.m in Sources */,
 				ED1C7F9A1C866D4C00724DC2 /* AppDelegate.m in Sources */,
+				65E5CB192A59C74300DC9E58 /* NSKeyedUnarchiver+securelyUnarchive.m in Sources */,
 				A92C344F1D1E280800D3A451 /* DetailViewController.m in Sources */,
 				2AF807F51CCFF7E000CFD995 /* UIViewController+Theme.m in Sources */,
+				65E5CB162A59C33700DC9E58 /* NSKeyedArchiver+securelyArchive.m in Sources */,
 				A92C34521D1E280800D3A451 /* SavedGifsViewController.m in Sources */,
 				2AF807EB1CCFDA5600CFD995 /* AVAssetImageGeneratorTimePoints.swift in Sources */,
 				A92C34501D1E280800D3A451 /* GifCell.m in Sources */,
