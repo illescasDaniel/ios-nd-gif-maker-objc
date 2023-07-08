@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Gif.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) NSMutableArray *gifs;
+@property (strong, nonatomic) NSMutableArray<Gif*> *gifs;
 
 @end
 

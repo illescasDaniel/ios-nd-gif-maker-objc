@@ -21,7 +21,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	NSSet *classes = [NSSet setWithObjects:[NSMutableArray class], [Gif class], nil];
-	NSMutableArray *retrievedGifs = [NSKeyedUnarchiver securelyUnarchiveObjectOfClasses:classes withFile:GIFURL];
+	NSMutableArray<Gif*> *retrievedGifs = [NSKeyedUnarchiver securelyUnarchiveObjectOfClasses:classes withFile:GIFURL];
 	self.gifs = retrievedGifs;
 
 	self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
